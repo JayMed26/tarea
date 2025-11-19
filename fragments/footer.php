@@ -15,7 +15,7 @@
         </nav>
         <nav class="footer-nav">
             <a href="#">About us</a>
-            <a href="contact.html">Contact us</a>
+            <a href="contact.php">Contact us</a>
             <a href="#">Terms and Conditions</a>
             <a href="#">Support</a>
             <a href="#">Accessibility</a>
