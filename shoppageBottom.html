@@ -10,17 +10,12 @@
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <script src="menu.js"></script>
 </head>
 
 <body>
-
     <header class="main-header">
         <div class="header-top">
-        <button type="button" class="nav-button">
-        <i class="fa-solid fa-bars"></i>
-        </button>
-        <img class="logo" src="images/LOGOWBG.png" alt="Logo ProGearHub">
+        <img class="logo" src="images/LOGOWBG.png">
         <form class="search">
             <input type="search" placeholder="Type something...">
             <div class="search-box">Search</div>
@@ -53,58 +48,92 @@
             <a href="#">Clearance</a>
         </nav>
     </header>
-    <!-- carousel -->
-    <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
-        <div class="slide">
-            <a href="shoppageShoes.html" class="slide-button">Start shopping</a>
-        </div>
-        <div class="slide">
-            <a href="shoppageTop.html" class="slide-button">Start shopping</a>
-        </div>
-        <div class="slide">
-            <a href="shoppageBottom.html" class="slide-button">Start shopping</a>
-        </div>
+<main class="shop-page">
+ <aside class="sidebar">
+    <details open>
+      <summary>Category</summary>
+      <ul>
+        <li><a href="#">Running</a></li>
+        <li><a href="#">Casual</a></li>
+        <li><a href="#">Trail</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Brand</summary>
+      <ul>
+        <li><a href="#">Nike</a></li>
+        <li><a href="#">Adidas</a></li>
+        <li><a href="#">Puma</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Size</summary>
+      <ul>
+        <li><a href="#">S</a></li>
+        <li><a href="#">M</a></li>
+        <li><a href="#">L</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Colour</summary>
+      <ul>
+        <li><a href="#">Black</a></li>
+        <li><a href="#">Blue</a></li>
+        <li><a href="#">Red</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Collection</summary>
+      <ul>
+        <li><a href="#">Winter</a></li>
+        <li><a href="#">Summer</a></li>
+      </ul>
+    </details>
+    <details>
+      <summary>Sorted by</summary>
+      <ul>
+        <li><a href="#">Price Low to High</a></li>
+        <li><a href="#">Newest</a></li>
+      </ul>
+    </details>
+  </aside>
+<div class="content2">
+  <div class="card">
+      <img src="images/pant1.png" alt="Pant 1">
+      <div class="card-content">
+        <h3>Pant 1</h3>
+        <p class="price">AUD $149</p>
+        <a href="#" class="card-button">Buy</a>
+      </div>
     </div>
-    <main class="content">
-        <div class="card">
-            <img src="/images/topc.png" alt="Progearhub top wear">
-            <div class="card-content">
-                <a href="shoppageTop.html" class="card-button">Shop Top Wear</a>
-            </div>
-        </div>
-         <div class="card">
-            <img src="/images/buttomc.png" alt="Progearhub buttom wear">
-            <div class="card-content">
-                <a href="shoppageBottom.html" class="card-button">Shop Buttom Wear</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="/images/shoesc.png" alt="Progearhub shoes">
-            <div class="card-content">
-                <a href="shoppageShoes.html" class="card-button">Shop Shoes</a>
-            </div>
-        </div>
-        <div class="banner">
-            <a href="#" Class="baner-button">Shop Items</a>
-        </div>
-        <div class="card">
-            <img src="/images/mujer.png" alt="a woman running">
-            <div class="card-content">
-                <a href="#" class="card-button">Shop Womens</a>
-            </div>
-        </div>
-         <div class="card">
-            <img src="/images/hombre.png" alt="a man playing tennis">
-            <div class="card-content">
-            <a href="#" class="card-button">Shop Mens</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="/images/niño.png" alt="child playing basketball">
-            <div class="card-content">
-                <a href="#" class="card-button">Shop Kids</a>
-            </div>
-        </div>
+
+    <div class="card">
+      <img src="images/pant2.png" alt="Pant 2">
+      <div class="card-content">
+        <h3>Pant 2</h3>
+        <p class="price">AUD $169</p>
+        <a href="#" class="card-button">Buy</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/pant3.png" alt="Pant 3">
+      <div class="card-content">
+        <h3>Pant 3</h3>
+        <p class="price">AUD $129</p>
+        <a href="#" class="card-button">Buy</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/pant4.png" alt="Pant 4">
+      <div class="card-content">
+        <h3>Pant 4</h3>
+        <p class="price">AUD $139</p>
+        <a href="#" class="card-button">Buy</a>
+      </div>
+    </div>
+    </div>
     </main>
     <footer class="main-footer">
         <nav class="social">
@@ -123,7 +152,7 @@
         </nav>
         <nav class="footer-nav">
             <a href="#">About us</a>
-            <a href="contact.html">Contact us</a>
+            <a href="#">Contact us</a>
             <a href="#">Terms and Conditions</a>
             <a href="#">Support</a>
             <a href="#">Accessibility</a>

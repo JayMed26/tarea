@@ -20,7 +20,7 @@
         <button type="button" class="nav-button">
         <i class="fa-solid fa-bars"></i>
         </button>
-        <img class="logo" src="images/LOGOWBG.png" alt="Logo ProGearHub">
+        <img class="logo" src="images/LOGOWBG.png">
         <form class="search">
             <input type="search" placeholder="Type something...">
             <div class="search-box">Search</div>
@@ -53,58 +53,22 @@
             <a href="#">Clearance</a>
         </nav>
     </header>
-    <!-- carousel -->
-    <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
-        <div class="slide">
-            <a href="shoppageShoes.html" class="slide-button">Start shopping</a>
-        </div>
-        <div class="slide">
-            <a href="shoppageTop.html" class="slide-button">Start shopping</a>
-        </div>
-        <div class="slide">
-            <a href="shoppageBottom.html" class="slide-button">Start shopping</a>
-        </div>
-    </div>
     <main class="content">
-        <div class="card">
-            <img src="/images/topc.png" alt="Progearhub top wear">
+  <div class="card">
             <div class="card-content">
-                <a href="shoppageTop.html" class="card-button">Shop Top Wear</a>
+                <form id="contact" method="post" action="/contact">
+                    <h1>Contact Us</h1>
+                    <label for="name">Name</label>
+                    <input required id="name" name="name" type="text" placeholder="Gemma Smith">
+                    <label for="email">Email</label>
+                    <input required id="email" name="email" type="email" placeholder="gemma@example.com">
+                    <label for="message">Message</label>
+                    <textarea required id="message" name="message" rows="5" cols="30" placeholder="Hello there"></textarea>
+                    <button type="submit" class="form-button">Send</button>
+                </form>
             </div>
         </div>
-         <div class="card">
-            <img src="/images/buttomc.png" alt="Progearhub buttom wear">
-            <div class="card-content">
-                <a href="shoppageBottom.html" class="card-button">Shop Buttom Wear</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="/images/shoesc.png" alt="Progearhub shoes">
-            <div class="card-content">
-                <a href="shoppageShoes.html" class="card-button">Shop Shoes</a>
-            </div>
-        </div>
-        <div class="banner">
-            <a href="#" Class="baner-button">Shop Items</a>
-        </div>
-        <div class="card">
-            <img src="/images/mujer.png" alt="a woman running">
-            <div class="card-content">
-                <a href="#" class="card-button">Shop Womens</a>
-            </div>
-        </div>
-         <div class="card">
-            <img src="/images/hombre.png" alt="a man playing tennis">
-            <div class="card-content">
-            <a href="#" class="card-button">Shop Mens</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="/images/niño.png" alt="child playing basketball">
-            <div class="card-content">
-                <a href="#" class="card-button">Shop Kids</a>
-            </div>
-        </div>
+         
     </main>
     <footer class="main-footer">
         <nav class="social">
