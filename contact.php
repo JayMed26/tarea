@@ -1,17 +1,23 @@
 <?php include "src/database.php"; ?>
-<?php 
-if( $_server['REQUEST_METHOD'] == 'POST') {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
-    $query = "INSERT INTO contact_us (name,email,subject,message,submitted_at) 
-    VALUES(?,?,?,?,,NOW() );
-    ";
-    $statement = $connection -> prepare($query);
-    $statement -> bind_param("ssss",$name,$email,$subject,$message);
-    if(!$statement -> execute() ) {
 
+<?php 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    $name = $_POST['name'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $subject = $_POST['subject'] ?? '';
+    $message = $_POST['message'] ?? '';
+
+    $query = "INSERT INTO contact_us (name, email, subject, message, submitted_at)
+              VALUES (?, ?, ?, ?, NOW())";
+
+    $statement = $connection->prepare($query);
+    $statement->bind_param("ssss", $name, $email, $subject, $message);
+
+    if (!$statement->execute()) {
+        echo "<p style='color:red'>Error al guardar: " . $statement->error . "</p>";
+    } else {
+        echo "<p style='color:green;text-align:center;'>Mensaje enviado correctamente.</p>";
     }
 }
 ?>
@@ -22,28 +28,33 @@ if( $_server['REQUEST_METHOD'] == 'POST') {
 
 <body>
 
-    <?php include "fragments/header.php"; ?>
+<?php include "fragments/header.php"; ?>
 
-    <main class="content">
-  <div class="card">
-            <div class="card-content">
-                <form id="contact" method="post" action="/contact">
-                    <h1>Contact Us</h1>
-                    <label for="name">Name</label>
-                    <input required id="name" name="name" type="text" placeholder="Gemma Smith">
-                    <label for="email">Email</label>
-                    <input required id="email" name="email" type="text" placeholder="gemma@example.com">
-                    <label for="subject">Subject</label>
-                    <input required id="subject" name="subject" type="subject" placeholder="subject">
-                    <label for="message">Message</label>
-                    <textarea required id="message" name="message" rows="5" cols="30" placeholder="Hello there"></textarea>
-                    <button type="submit" class="form-button">Send</button>
-                </form>
-            </div>
+<main class="content">
+    <div class="card">
+        <div class="card-content">
+            <form id="contact" method="post" action="contact.php">
+                <h1>Contact Us</h1>
+
+                <label for="name">Name</label>
+                <input required id="name" name="name" type="text" placeholder="Gemma Smith">
+
+                <label for="email">Email</label>
+                <input required id="email" name="email" type="email" placeholder="gemma@example.com">
+
+                <label for="subject">Subject</label>
+                <input required id="subject" name="subject" type="text" placeholder="Subject">
+
+                <label for="message">Message</label>
+                <textarea required id="message" name="message" rows="5" cols="30" placeholder="Hello there"></textarea>
+
+                <button type="submit" class="form-button">Send</button>
+            </form>
         </div>
-         
-    </main>
- <?php include "fragments/footer.php"; ?>
-</body>
+    </div>
+</main>
 
+<?php include "fragments/footer.php"; ?>
+
+</body>
 </html>
